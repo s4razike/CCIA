@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+:root { /*color*/
+    --primary-color: #00635d;
+    --primary-color-alt:  #d396bc;
+    --second-color: #4c212a;
+    --second-color-alt: hsl(255, 31%, 75%);
+    --third-color:#01172f;
+    --background-color:#eef1ef;
+    --background-color-alt:#96bbb9;
+    --white-color: #ffffff;
+    --dark-color: #000000; }
+
+:root{ /*dimensions*/
+        --spacing-s: 4px;
+        --spacing-m: 16px;
+        --spacing-l: 25px;
+        --spacing-xl: 32px;
+        --spacing-xxl: 64px;
+        --width-container: 1200px;
+      }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color:var(--background-color);
+}
+
+/*-----------------------header---------------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color-alt);
+    padding: 1rem 10rem;
+    border-color: var(--dark-color);
+  }
+
+  .nav-items {
+    display: flex;
+    font-family: 'Mooli', sans-serif;
+  }
+  .nav-item {
+    margin: 0 2rem;
+    align-items: right;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+    letter-spacing: 0.052em;
+    position: relative;
+    background: -webkit-linear-gradient(
+        var(--third-color),
+        var(--primary-color)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-link::before {
+    content: "";
+    background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 350ms;
+  }
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background: var(--primary-color);
+  }
+
+  .nav-items a:hover {
+    color: var(--white-color);
+	transition: all .3s;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .bx-menu,
+  .bx-x {
+    cursor: pointer;
+    background: -webkit-linear-gradient(
+      120deg,
+      var(--white-color),
+      var(--white-color)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none !important;
+  }
+
+  /*---------------------------------secuencias------------------------------*/
+
+  .menu {
+    padding: 1rem 2rem;
+    background:var(--background-color);
+    height: 580px;
+  }
+  
+  .style-menu {
+    text-align: center;
+    margin: 5% auto;
+  }
+  .titulo{
+  text-align: center;
+  font-family: 'Croissant One', cursive;
+  font-size:4rem;
+}
+.subtitulo{
+  padding: 4rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.5rem;
+  font-weight: 1.4;
+}
+.operacion {
+  font-family: 'Caveat', cursive;
+  padding-top: 2rem;
+  padding-left:4rem;
+  font-size: 3rem;
+}
+
+.explicacion{
+  width: 700px;
+  padding-left: 4rem;
+  font-family: 'Mooli', sans-serif;
+}
+
+.aureo {
+    position: absolute;
+    margin-left: 87rem;
+    margin-top: 15rem;
+    height: 220px;
+  }
+
+.aureo2 {
+    position: absolute;
+    margin-left: 50rem;
+    margin-top: 4rem;
+    height: 350px;
+  }
+
+.aureo3 {
+    position: absolute;
+    margin-left: 88rem;
+    margin-top: 1rem;
+    height: 200px;
+  }
+
+  .aureo4 {
+    position: absolute;
+    margin-left: 98rem;
+    margin-top: 4rem;
+    height: 200px;
+  }
+  .aureo5 {
+    position: absolute;
+    margin-left: 98rem;
+    margin-top: 18rem;
+    height: 100px;
+  }
+
+  .operacion {
+    font-family: 'Caveat', cursive;
+    padding-top: 2rem;
+    padding-left:4rem;
+    font-size: 3rem;
+  }
+
+.explicacion-op {
+  justify-content: center;
+  font-family: 'Mooli', sans-serif;
+  padding-left: 4rem;
+  padding-top: 1rem;
+  font-size:1.4rem;
+  color: var(--second-color);
+}
+
+/*----------------------------------------------Fibonacci--------------------*/
+
+.Fibonacci {
+  padding: 1rem 2rem;
+  background:var(--background-color);
+  height: 300px;
+}
+
+.titulo1 {
+  padding: 2rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: var(--primary-color);
+}
+
+.ingresar1 {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  padding: 0 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #000000;
+  width: 700px;
+}
+
+.number {
+  margin-top: 30px;
+  margin-left: 15rem;
+}
+.button {
+  margin-top: 15px;
+  margin-left: 15rem;
+  font-family: 'Mooli', sans-serif;
+  color: var(--primary-color);
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 100px;
+}
+
+.resultado {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.3rem;
+  font-weight: 50px;
+  color: var(--primary-color);
+}
+
+/*----------------------------Sucesion Aritmetica-----------------------------*/
+
+.aritmetica {
+  padding: 1rem 2rem;
+  background:var(--primary-color);
+  height: 580px;
+}
+
+.titulo2 {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: #ffffff;
+}
+
+.definicion-aritmetica {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  padding: 0 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #ffffff;
+  width: 700px;
+  margin-bottom: 3rem;
+}
+
+.ingresar2 {
+  
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  margin-left: 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #ffffff;
+  width: 700px;
+  
+}
+
+.number2 {
+  margin-top: 30px;
+  margin-left: 17rem;
+}
+.button2 {
+  margin-top: 15px;
+  margin-left: 15rem;
+  font-family: 'Mooli', sans-serif;
+  color: #ffffff;
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 100px;
+}
+
+.resultado2 {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.3rem;
+  font-weight: 50px;
+  color: var(--background-color-alt);
+}
+
+.img-aritmetica {
+  position: absolute;
+  margin-left: 60rem;
+  margin-top: -2rem;
+  height: 250px;
+}
+
+/*----------------------------------------------------------------acordeon------------------------------------------------------------*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+.accordion {
+  position: absolute;
+  color: var(--background-color-alt);
+  border: 2px solid;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 400px;
+  margin-left: 70rem;
+  margin-top: -10rem;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  color: white;
+  background: var(--background-color-alt);
+  cursor: pointer;
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.accordion--radio {
+  --theme: var(--background-color-alt);
+}
+
+/* Small animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce .5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-.25rem);
+  }
+}
+
+/*------------------------------------sucesion geometrica--------------------------------------------------*/
+
+
+.geometrica {
+  padding: 1rem 2rem;
+  background:var(--background-color);
+  height: 450px;
+}
+
+.titulo3 {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: var(--second-color);
+}
+
+.definicion-geometrica {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  padding: 0 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #000000;
+  width: 700px;
+  margin-bottom: 3rem;
+}
+
+.ingresar3 {
+  
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  margin-left: 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #000000;
+  width: 700px;
+  
+}
+
+.number3 {
+  margin-top: 30px;
+  margin-left: 17rem;
+}
+.button3 {
+  margin-top: 15px;
+  margin-left: 15rem;
+  font-family: 'Mooli', sans-serif;
+  color: var(--second-color);
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 100px;
+}
+
+.resultado3 {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.3rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.img-geometrica {
+  position: absolute;
+  margin-left: 60rem;
+  margin-top: 1rem;
+  height: 250px;
+}
+
+/*------------------------------------congruencia--------------------------------------------------*/
+
+
+.congruencia {
+  padding: 1rem 2rem;
+  background:var(--background-color);
+  height: 500px;
+}
+
+.titulo4 {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: var(--second-color);
+}
+
+.definicion-congruencia {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  padding: 0 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #000000;
+  width: 900px;
+  margin-bottom: 3rem;
+}
+
+.ingresar4 {
+  
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  margin-left: 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #000000;
+  width: 700px;
+  
+}
+
+.number4 {
+  margin-top: 30px;
+  margin-left: 17rem;
+}
+.button4 {
+  margin-top: 15px;
+  margin-left: 15rem;
+  font-family: 'Mooli', sans-serif;
+  color: var(--second-color);
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 200px;
+}
+
+.resultado4 {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.3rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.img-congruencia {
+  position: absolute;
+  margin-left: 60rem;
+  margin-top: 1rem;
+  height: 150px;
+}
+
+/*-----------------------Footer---------------------------------------*/
+
+.footer {
+  margin-top:10rem;
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-color);
+}
+.names {
+  color:var(--white-color) ;
+  padding: 0.1rem 0;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+.names b {
+  font-size: 0.9rem;
+}
+.home {
+  padding: 0.3rem;
+  color: var(--background-color-alt);
+  font-size: 0.8rem;
+}
+

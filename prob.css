@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+:root { /*color*/
+    --primary-color: #00635d;
+    --primary-color-alt:  #d396bc;
+    --second-color: #4c212a;
+    --second-color-alt: hsl(255, 31%, 75%);
+    --third-color:#01172f;
+    --background-color:#eef1ef;
+    --background-color-alt:#96bbb9;
+    --white-color: #ffffff;
+    --dark-color: #000000; }
+
+:root{ /*dimensions*/
+        --spacing-s: 4px;
+        --spacing-m: 16px;
+        --spacing-l: 25px;
+        --spacing-xl: 32px;
+        --spacing-xxl: 64px;
+        --width-container: 1200px;
+      }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color:var(--background-color);
+}
+
+/*-----------------------header---------------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color-alt);
+    padding: 1rem 10rem;
+    border-color: var(--dark-color);
+  }
+
+  .nav-items {
+    display: flex;
+    font-family: 'Mooli', sans-serif;
+  }
+  .nav-item {
+    margin: 0 2rem;
+    align-items: right;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+    letter-spacing: 0.052em;
+    position: relative;
+    background: -webkit-linear-gradient(
+        var(--third-color),
+        var(--primary-color)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-link::before {
+    content: "";
+    background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 350ms;
+  }
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background: var(--primary-color);
+  }
+
+  .nav-items a:hover {
+    color: var(--white-color);
+	transition: all .3s;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .bx-menu,
+  .bx-x {
+    cursor: pointer;
+    background: -webkit-linear-gradient(
+      120deg,
+      var(--white-color),
+      var(--white-color)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none !important;
+  }
+
+/*----------------------------------Probabilidad--------------------------------------------------*/
+
+.menu {
+    padding: 1rem 2rem;
+    background:var(--background-color);
+    height: 750px;
+  }
+  
+  .style-menu {
+    text-align: center;
+    margin: 5% auto;
+  }
+  .titulo{
+  text-align: center;
+  font-family: 'Croissant One', cursive;
+  font-size:4rem;
+}
+.subtitulo{
+  padding: 4rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.5rem;
+  font-weight: 1.4;
+}
+.operacion {
+  font-family: 'Caveat', cursive;
+  padding-top: 2rem;
+  padding-left:4rem;
+  font-size: 3rem;
+}
+
+.explicacion{
+  width: 700px;
+  padding-left: 4rem;
+  font-family: 'Mooli', sans-serif;
+}
+
+.explicacion-op {
+  justify-content: center;
+  font-family: 'Mooli', sans-serif;
+  padding-left: 4rem;
+  padding-top: 1rem;
+  font-size:1rem;
+}
+
+.box {
+  border-radius: 10%;
+  position: absolute;
+  height: 450px;
+	width: 710px;
+  background-color: var(--background-color-alt);
+  opacity: 50%;
+  margin-left: 55rem;
+  margin-top: 10rem;
+}
+
+.explicacion-per {
+    justify-content: center;
+    color: var(--primary-color);
+    font-family: 'Mooli', sans-serif;
+    padding-left: 7rem;
+    padding-top: 2rem;
+    font-size:1rem;
+    width: 550px;
+  }
+
+  /*-----------------------------------tecnicas de conteo ---------------------------*/
+  #cuadricula {
+    position: absolute;
+    display: grid;
+    grid-template-columns:repeat(2,300px); 
+    grid-template-rows:repeat(2, 200px);
+    width:800px;
+    height: 800px;
+    grid-gap:.20rem;
+    margin-left: 60rem;
+    margin-top: -30rem;
+  }
+  
+  .item:nth-child(5) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  .item:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  
+  .item:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .item:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  .item {
+    border: 1px solid #000; 
+    border-radius:10px;
+    background-color:#3E989B;
+    background-color:var(--color);
+    display:grid;
+    background-size: cover; /* Agrega esta propiedad para ajustar el tamaño de fondo de la imagen */
+  background-repeat: no-repeat;
+    
+  }
+  
+  .item p {
+    justify-self: center;
+    border-left: 1rem;
+    font-family: 'Croissant One', cursive;
+    color:var(--background-color);
+  }
+  
+  /*------------------------------Calculadora conteo----------------------------*/
+
+  .conteo {
+    padding: 1rem 2rem;
+    background:var(--primary-color);
+    height: 400px;
+  }
+  
+  .titulo1 {
+    padding: 2rem 20rem  ;
+    text-align: left;
+    font-family: 'Mooli', sans-serif;
+    font-size:1.7rem;
+    font-weight: 1.4;
+    color: var(--background-color-alt);
+  }
+  
+  .ingresar1 {
+    width: 500px;
+    font-family: 'Mooli', sans-serif;
+    margin-left:10rem;
+    padding-right: 2rem;
+    text-align: left;
+    font-size:1rem;
+    font-weight: 1.5;
+    color: #ffffff;
+    width: 700px;
+  }
+  
+  .forms {
+    margin-top: 15px;
+    margin-left: 1rem;
+    font-family: 'Mooli', sans-serif;
+    color: var(--background-color-alt);
+    background: none;
+    border: 2px solid;
+    height: 30px;
+    width: 250px;
+  }
+
+  .number {
+    margin-top: 30px;
+  }
+  .button {
+    margin-top: 15px;
+    margin-left: 15rem;
+    font-family: 'Mooli', sans-serif;
+    color: var(--background-color-alt);
+    background: none;
+    border: 2px solid;
+    height: 30px;
+    width: 100px;
+  }
+  
+  .resultado {
+    padding: 0 10rem;
+    text-align: left;
+    font-family: 'Mooli', sans-serif;
+    font-size:1.3rem;
+    font-weight: 50px;
+    color: var(--background-color-alt);
+  }
+
+  .img-helado {
+    position: absolute;
+    margin-left: 45rem;
+    margin-top: 0rem;
+    height: 250px;
+  }
+
+  .nk-exp {
+    position: absolute;
+    width: 400px;
+    font-family: 'Mooli', sans-serif;
+    margin-left: 74rem;
+    text-align: left;
+    font-size:1rem;
+    font-weight: 1.5;
+    color: var(--white-color);
+    margin-top: -5rem;
+  }
+  
+  /*-----------------------------explicación--------------------------*/
+
+  .programacion {
+    padding: 1rem 2rem;
+    background:var(--background-color);
+    height: 370px;
+  }
+  
+  
+  
+  .explicacion-form {
+    
+    font-family: 'Mooli', sans-serif;
+    padding: 0 4rem;
+    text-align: left;
+    font-size:1rem;
+    font-weight: 1.5;
+    color: var(--dark-color);
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+  }
+
+  .img-perm {
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 0rem;
+    border: var(--background-color-alt);
+    height: 300px;
+  }
+  
+  .img-comb {
+    position: absolute;
+    margin-left: 65rem;
+    margin-top: 0rem;
+    border: var(--background-color-alt);
+    height: 300px;
+  }
+
+  /*-----------------------Footer---------------------------------------*/
+
+.footer {
+    margin-top:10rem;
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-color);
+  }
+  .names {
+    color:var(--white-color) ;
+    padding: 0.1rem 0;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+  .names b {
+    font-size: 0.9rem;
+  }
+  .home {
+    padding: 0.3rem;
+    color: var(--background-color-alt);
+    font-size: 0.8rem;
+  }

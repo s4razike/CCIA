@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+:root { /*color*/
+    --primary-color: #00635d;
+    --primary-color-alt:  #d396bc;
+    --second-color: #4c212a;
+    --second-color-alt: hsl(255, 31%, 75%);
+    --third-color:#01172f;
+    --background-color:#eef1ef;
+    --background-color-alt:#96bbb9;
+    --white-color: #ffffff;
+    --dark-color: #000000; }
+
+:root{ /*dimensions*/
+        --spacing-s: 4px;
+        --spacing-m: 16px;
+        --spacing-l: 25px;
+        --spacing-xl: 32px;
+        --spacing-xxl: 64px;
+        --width-container: 1200px;
+      }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color:var(--background-color);
+}
+
+/*-----------------------header---------------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color-alt);
+    padding: 1rem 10rem;
+    border-color: var(--dark-color);
+  }
+
+  .nav-items {
+    display: flex;
+    font-family: 'Mooli', sans-serif;
+  }
+  .nav-item {
+    margin: 0 2rem;
+    align-items: right;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+    background: -webkit-linear-gradient(
+        var(--third-color),
+        var(--primary-color)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-link::before {
+    content: "";
+    background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 350ms;
+  }
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background: var(--primary-color);
+  }
+
+  .nav-items a:hover {
+    color: var(--white-color);
+	transition: all .3s;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .bx-menu,
+  .bx-x {
+    cursor: pointer;
+    background: -webkit-linear-gradient(
+      120deg,
+      var(--white-color),
+      var(--white-color)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none !important;
+  }
+  /*-----------------------------------------tema1--------------------------------------------------*/
+
+  .menu2 {
+    padding: 1rem 2rem;
+    background:var(--background-color);
+    border-color: var(--dark-color);
+    height: 750px;
+  }
+  
+  .style-menu {
+    text-align: center;
+    margin: 5% auto;
+  }
+  .titulo2{
+  text-align: center;
+  font-family: 'Croissant One', cursive;
+  font-size:4rem;
+}
+.subtitulo{
+  padding: 4rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.5rem;
+  font-weight: 1.4;
+}
+.operacion {
+  font-family: 'Caveat', cursive;
+  padding-top: 2rem;
+  padding-left:4rem;
+  font-size: 3rem;
+}
+
+.explicacion{
+  width: 700px;
+  padding-left: 4rem;
+  font-family: 'Mooli', sans-serif;
+}
+
+.explicacion-op {
+  justify-content: center;
+  font-family: 'Mooli', sans-serif;
+  padding-left: 4rem;
+  padding-top: 1rem;
+  font-size:1rem;
+}
+
+.box {
+  border-radius: 10%;
+  position: absolute;
+  height: 450px;
+	width: 710px;
+  background-color: var(--background-color-alt);
+  opacity: 50%;
+  margin-left: 55rem;
+  margin-top: 10rem;
+}
+.clock{
+  margin-left: 19rem;
+  margin-top: 0rem;
+	border-radius: 60px;
+	border: 3px solid var(--primary-color);
+	height: 80px;
+	width: 80px;
+	position: absolute;
+
+	top: 28%;
+	top: -webkit-calc(50% - 43px);
+	top: calc(50% - 43px);
+	left: 35%;
+	left: -webkit-calc(50% - 43px);
+	left: calc(50% - 43px);
+}
+.clock:after{
+	content: "";
+	position: absolute;
+	background-color: var(--primary-color);
+	top:2px;
+	left: 48%;
+	height: 38px;
+	width: 4px;
+	border-radius: 5px;
+	-webkit-transform-origin: 50% 97%;
+			transform-origin: 50% 97%;
+	-webkit-animation: grdAiguille 2s linear infinite;
+			animation: grdAiguille 2s linear infinite;
+}
+
+@-webkit-keyframes grdAiguille{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes grdAiguille{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.clock:before{
+	content: "";
+	position: absolute;
+	background-color: var(--primary-color);
+	top:6px;
+	left: 48%;
+	height: 35px;
+	width: 4px;
+	border-radius: 5px;
+	-webkit-transform-origin: 50% 94%;
+			transform-origin: 50% 94%;
+	-webkit-animation: ptAiguille 12s linear infinite;
+			animation: ptAiguille 12s linear infinite;
+}
+
+@-webkit-keyframes ptAiguille{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes ptAiguille{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.explicacion-rej {
+  position: absolute;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-left: 59rem;
+  margin-top: -10rem;
+  width: 600px;
+}
+
+
+/*---------------------------------------------------------------programacion--------------------------------------------------------------------------------------*/
+
+.programacion {
+  
+    background:var(--primary-color);
+    height: 600px;    
+}
+
+.subtitulo2 {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: #ffffff;
+}
+
+.primos {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.5rem;
+  font-weight: 1.5;
+  color: #ffffff;
+  width: 600px;
+}
+
+.definicion-primos {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  padding: 0 10rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: #ffffff;
+  width: 700px;
+}
+
+.number {
+  margin-top: 30px;
+  margin-left: 15rem;
+}
+.button {
+  margin-top: 15px;
+  margin-left: 15rem;
+  font-family: 'Mooli', sans-serif;
+  color: #ffffff;
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 100px;
+}
+
+.resultado {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.3rem;
+  font-weight: 50px;
+  color: var(--background-color-alt);
+}
+
+.mensaje-error0 {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.3rem;
+  font-weight: 50px;
+  color: var(--background-color-alt);
+}
+
+.img-primos {
+  position: absolute;
+  margin-left: 38rem;
+  margin-top: -3rem;
+  border: var(--background-color-alt);
+}
+
+.pizza {
+  position: absolute;
+  margin-left: 75rem;
+  margin-top: -25rem;
+
+}
+/*----------------------------------------------------------------acordeon------------------------------------------------------------*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+.accordion {
+  position: absolute;
+  color: var(--background-color-alt);
+  border: 2px solid;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 400px;
+  margin-left: 42rem;
+  margin-top: -10rem;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  color: white;
+  background: var(--background-color-alt);
+  cursor: pointer;
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.accordion--radio {
+  --theme: var(--background-color-alt);
+}
+
+/* Small animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+  animation: bounce .5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-.25rem);
+  }
+}
+
+/*------------------------------------------------------------------------MCD----------------------------------------------------------------------------------------------------------------*/
+
+.MCD {
+  padding: 1rem 2rem;
+  background:var(--background-color);
+  height: 500px;
+}
+
+.MCD-titulo {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: var(--second-color);
+}
+
+.definicion-MCD {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  padding: 0 4rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.number1 {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 2rem;
+}
+.button1 {
+  margin-top: 15px;
+  margin-left: 4rem;
+  font-family: 'Mooli', sans-serif;
+  color: var(--second-color);
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 250px;
+}
+
+label.MCD{
+  margin-bottom:2rem ;
+  padding: 0 4rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.resultado1 {
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.mensaje-error1 {
+  margin-top: 10px;
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.img-MCD {
+  position: absolute;
+  margin-left: 40rem;
+  margin-top: -10rem;
+  border: var(--background-color-alt);
+  height: 250px;
+}
+
+.euclides {
+  position: absolute;
+  margin-left: 74rem;
+  margin-top: -13rem;
+}
+
+.euclides-exp {
+  position: absolute;
+  width: 450px;
+  font-family: 'Mooli', sans-serif;
+  margin-left: 74rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: var(--dark-color);
+  margin-top: -5rem;
+}
+
+/*---------------------------------------------mcm-----------------------------*/
+
+.mcm {
+
+  background:var(--background-color-alt);
+  height: 500px;    
+}
+
+label.mcm {
+  margin-bottom:2rem ;
+  margin-left: 6rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1rem;
+  font-weight: 50px;
+  color: var(--second-color);
+  }
+
+.mcm-titulo {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: var(--second-color);
+}
+
+.definicion-mcm {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  margin-left: 6rem;
+}
+
+.number1 {
+  position: relative;
+  margin-top: 30px;
+}
+
+.number2 {
+  position: absolute;
+  margin-top: -2rem;
+  margin-left: 20rem;
+}
+.button2 {
+  margin-top: 15px;
+  margin-left: 6rem;
+  font-family: 'Mooli', sans-serif;
+  color: #000000;
+  background: none;
+  border: 2px solid;
+  height: 30px;
+  width: 250px;
+}
+
+.resultado2 {
+  margin-top: 10px;
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.mensaje-error2 {
+  margin-top: 10px;
+  padding: 0 10rem;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1rem;
+  font-weight: 50px;
+  color: var(--second-color);
+}
+
+.img-mcm {
+  position: absolute;
+  margin-left: 80rem;
+  margin-top: -13rem;
+}
+
+.tortugas {
+  position: absolute;
+  margin-left: 50rem;
+  margin-top: -20rem;
+  height: 400px;
+}
+
+/*------------------------------------------Fermat-Euler-------------------------------*/
+
+.Euler-Fermat {
+  
+  background:var(--background-color);
+  height: 400px;    
+}
+
+.fermat-titulo {
+  padding: 3rem 20rem  ;
+  text-align: left;
+  font-family: 'Mooli', sans-serif;
+  font-size:1.7rem;
+  font-weight: 1.4;
+  color: var(--second-color);
+}
+
+.definicion-fermat {
+  width: 500px;
+  font-family: 'Mooli', sans-serif;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  margin-left: 6rem;
+}
+
+.operacion-fermat {
+  font-family: 'Caveat', cursive;
+  padding-left:7rem;
+  font-size: 2rem;
+  width: 700px;
+}
+
+.number {
+margin-top: 30px;
+margin-left: 15rem;
+}
+
+.button4 {
+margin-top: 15px;
+margin-left: 15rem;
+font-family: 'Mooli', sans-serif;
+color: var(--second-color);
+background: none;
+border: 2px solid;
+height: 30px;
+width: 100px;
+}
+
+.resultado4 {
+padding: 0 10rem;
+text-align: left;
+font-family: 'Mooli', sans-serif;
+font-size:1.3rem;
+font-weight: 50px;
+color: var(--second-color);
+}
+
+.Ingresar {
+  font-family: 'Mooli', sans-serif;
+  text-align: left;
+  font-size:1rem;
+  color: var(--dark-color);
+  margin-left: 6rem;  
+}
+
+.number3 {
+  position: absolute;
+  margin-top: -2.2rem;
+  margin-left: 20rem;
+}
+
+.number4 {
+  position: absolute;
+  margin-top: -2.2rem;
+  margin-left: 30rem;
+}
+
+.img-fermat {
+  position: absolute;
+  margin-left: 60rem;
+  margin-top: -13rem;
+}
+
+.fermat-exp {
+  position: absolute;
+  width: 450px;
+  font-family: 'Mooli', sans-serif;
+  margin-left: 60rem;
+  text-align: left;
+  font-size:1rem;
+  font-weight: 1.5;
+  color: var(--dark-color);
+  margin-top: -7rem;
+}
+/*-----------------------Footer---------------------------------------*/
+
+.footer {
+  margin-top:10rem;
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-color);
+}
+.names {
+  color:var(--white-color) ;
+  padding: 0.1rem 0;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+.names b {
+  font-size: 0.9rem;
+}
+.home {
+  padding: 0.3rem;
+  color: var(--background-color-alt);
+  font-size: 0.8rem;
+}
+
+

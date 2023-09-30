@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="ordenamiento.css">
+    
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="ordenamiento.html" class="nav-link">ORDENAMIENTO</a></li>
+            <li class="nav-item"><a href="modulos.html" class="nav-link">MODULOS</a></li>
+            <li class="nav-item"><a href="secuencias.html" class="nav-link">SECUENCIAS</a></li>
+            <li class="nav-item"><a href="prob.html" class="nav-link">PROBABILIDAD</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x"></i>
+          </div>
+        </header>
+
+        <section class="menu">
+            <div class="style-menu"></div>
+            <div class="titulo">Ordenamiento</div>
+            <div class="subtitulo">Relaciones de equivalencia y orden</div>
+            <div class="explicacion">Dentro de la programación se utilizan diversos metodos de ordenamiento para organizar los valores de una tabla o grupo de datos de acuerdo a un criterio especifico, puede ser ascendente o descendente. 
+                Este puede lograrse de forma recursiva, en la que una funsión se llama a si misma, o por medio de una iteración por medio de bucles for y while. 
+            </div>
+            <img src="https://github.com/gbaudino/MetodosDeOrdenamiento/raw/master/images/bubble-sort.gif" alt="" class="gif">
+        </section>
+
+        <section class="ordenamiento"> 
+            <h1 class="titulo1">Algoritmo de selección</h1>
+            <div class="definicion-orden">Hay diferentes métodos de ordenamiento, el método burbuja, el método de incersión, por mezcla, entre otros. No obstante para este algoritmo aplicamos el método de selección. Este consiste en iterar buscando el menor número en la lista y colocandolo al inicio de esta.   <br> <br> Mira como funciona:</div>
+            <img src="https://github.com/gbaudino/MetodosDeOrdenamiento/raw/master/images/selection-sort-animation.gif" alt="" class="img-programa">
+            <img src="img/ordenamiento-inclusion.png" alt="" class="img-orden">
+            <label class="ingresar1" for="inputArray">Ingrese los valores del arreglo separados por comas:</label>
+    <input class="number" type="text" id="inputArray" placeholder="Por ejemplo: 5, 3, 1, 6, 4">
+    <br> <br>
+    <button class="button" onclick="sortArray()">Ordenar</button>
+    
+    <p class="resultado">Arreglo original: <span id="originalArray"></span></p>
+    <p class="resultado">Arreglo ordenado: <span id="sortedArray"></span></p>
+        </section>
+
+        <section class="ordenamiento2"> 
+            <h1 class="titulo2"></h1>
+            <div class="definicion-orden2">Podemos cambiar el criterio en base al que organizamos la lista y ordenarla de mayor a menor a diferencia del algoritmo de arriba. <br> <br> Mira como funciona:</div>
+            <img src="img/ordenamiento-inclusion2.png" alt="" class="img-orden2">
+            <label class="ingresar2" for="inputArray2">Ingrese los valores del arreglo separados por comas:</label>
+            <input class="number2" type="text" id="inputArray2" placeholder="Por ejemplo: 5, 3, 1, 6, 4">
+            <br> <br>
+            <button class="button" onclick="sortArray2()">Ordenar</button>
+            
+            <p class="resultado2">Arreglo original: <span id="originalArray2"></span></p>
+            <p class="resultado2">Arreglo ordenado: <span id="sortedArray2"></span></p>
+        </section> 
+
+        <section class="accordion">
+            <div class="tab">
+              <input type="checkbox" name="accordion-1" id="cb1">
+              <label for="cb1" class="tab__label">Observa</label>
+              <div class="tab__content">
+                <p>Para cambiar el criterio de organización modificamos "if (arr[j] < arr[minIndex])", cambiando el signo por mayor que. Esta porción del código analiza el número i=0 (minIndex) con j=i+1, si cumple la condición se guarda, sino se actualiza minIndex con el valor j y se vuelve a iterar</p>
+              </div>
+            </section>
+      
+            <footer>
+                <div class="footer">
+                <div class="names">Andres Felipe Torres Herrera</div>
+                <div class="names">Henry Mateo Chaverra Mena</div>
+                <div class="names"> David Andrés Castellanos Angulo</div>
+                <div class="names">Sara Daniela Baquero Cifuentes</div>
+                <a class="home" href="#header">Home</a>
+                </div>
+                </footer>
+                
+        <script>
+            function selectionSort(arr) {
+            const n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+
+                if (minIndex !== i) {
+                    const temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
+                }
+            }
+        }
+
+        function sortArray2() {
+            const inputArray2 = document.getElementById("inputArray2").value;
+            const originalArray2 = inputArray2.split(',').map(item => parseInt(item.trim()));
+            const sortedArray2 = [...originalArray2];
+            selectionSort2(sortedArray2);
+
+            document.getElementById("originalArray2").textContent = originalArray2.join(", ");
+            document.getElementById("sortedArray2").textContent = sortedArray2.join(", ");
+            }
+
+            function selectionSort2(arr) {
+            const n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] > arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+
+                if (minIndex !== i) {
+                    const temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
+                }
+            }
+        }
+
+        function sortArray2() {
+            const inputArray2 = document.getElementById("inputArray2").value;
+            const originalArray2 = inputArray2.split(',').map(item => parseInt(item.trim()));
+            const sortedArray2 = [...originalArray2];
+            selectionSort2(sortedArray2);
+
+            document.getElementById("originalArray2").textContent = originalArray2.join(", ");
+            document.getElementById("sortedArray2").textContent = sortedArray2.join(", ");
+            }
+        </script>
+</body>
+</html>

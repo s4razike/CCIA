@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="secuencias.css">
+    
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="ordenamiento.html" class="nav-link">ORDENAMIENTO</a></li>
+            <li class="nav-item"><a href="modulos.html" class="nav-link">MODULOS</a></li>
+            <li class="nav-item"><a href="secuencias.html" class="nav-link">SECUENCIAS</a></li>
+            <li class="nav-item"><a href="prob.html" class="nav-link">PROBABILIDAD</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x"></i>
+          </div>
+        </header>
+
+        <section class="menu">
+            <div class="style-menu"></div>
+            <div class="titulo">Secuencias</div>
+            <img class="aureo" src="https://i.pinimg.com/564x/a6/22/df/a622dfced7048d57b881643d10a7537a.jpg" alt="">
+            <img class="aureo2" src="https://1.bp.blogspot.com/-4lfdP4iQ69Y/V6u1OZZCQtI/AAAAAAAAGwM/J8QEFxAZ8CogODfw0oKq2x_V4neyHXd3wCLcB/s1600/FI.png" alt=""> 
+            <img class="aureo3" src="https://qph.cf2.quoracdn.net/main-qimg-84ea7c3ec5684127028f4fd15b375cc3-lq" alt="">   
+            <img class="aureo4" src="https://i.pinimg.com/564x/40/d6/26/40d626bea56e28b14611e66bc9f7b524.jpg" 
+            alt="">
+            <img class="aureo5" src="https://i.pinimg.com/564x/d9/7b/ce/d97bce36a2e6ad6b19f9a2c83b279d49.jpg" 
+            alt="">
+            <div class="subtitulo">Fibonacci y el arte</div>
+            <div class="explicacion">La secuencia Fibonacci es una serie infinita de números que inicia con 0 y 1, de tal manera que siguen añadiendo valores que son el resultado de los dos números anteriores <br> <br> Ahora, si divides cualquier número en la secuencia por el anterior el resultado siempre es cercano a 1.61803, llamado el número aureo. 
+            </div>
+              <div class="operacion">Φ= a/b </div>
+              <div class="explicacion-op">Es por esto que la secuencia Fibonacci es la secuencia dorada</div>
+
+        </section>
+<section class="Fibonacci">
+  <h1 class="titulo1">Calculadora de Secuencia Fibonacci</h1>
+    
+  <label for="numTerminos"  class="ingresar1">Ingresa el número de términos que quieres:</label>
+  <input type="number" id="numTerminos" min="1" value="1">
+  <button onclick="calcularFibonacci()"  class="button">Calcular</button>
+  <p class="resultado"><span id="fibonacciResult"></span></p>
+</section>
+
+<section class="aritmetica">  
+  <h2 class="titulo2">Sucesión Aritmética</h2>
+  <img src="img/secuencias-aritmetica.png" alt="" class="img-aritmetica">
+  <div class="definicion-aritmetica">En una sucesión aritmética la diferencia entre un termino y el siguiente siempre es la misma. Es decir, cada termino se obtiene sumando o restando una misma cantidad al termino anterior <br> <br> Crea una sucesión artmética: </div>
+  <label class="ingresar2" for="aAritmetica">Define un valor inicial: </label>
+  <input type="number2" id="aAritmetica" value="2">
+  <br>
+  <label class="ingresar2" for="dAritmetica">Define una diferencia común (suma o resta): </label>
+  <input type="number2" id="dAritmetica" value="3">
+  <br>
+  <label class="ingresar2" for="nAritmetica">Define el número de términos: </label>
+  <input type="number2" id="nAritmetica" value="5">
+  <br>
+  <button class="button2" onclick="calcularSucesionAritmetica()">Calcular</button>
+  <p class="resultado2"><span id="sucesionAritmeticaResult"></span></p>
+</section>
+
+<section class="accordion">
+  <div class="tab">
+    <input type="checkbox" name="accordion-1" id="cb1">
+    <label for="cb1" class="tab__label">Observa</label>
+    <div class="tab__content">
+      <p>Para hacer esto usamos el metodo "push" el cual nos permite añadir un elemento al final de un array</p>
+    </div>
+  </section>
+        
+<section class="geometrica">
+
+  <h2 class="titulo3">Sucesión Geométrica</h2>
+  <img src="img/secuencias-geometrica .png" alt="" class="img-geometrica">
+  <div class="definicion-geometrica">En una sucesión geométrica la diferencia entre un termino y el siguiente se define por un mismo cociente o razón, es decir se multiplica o dividen los números de la secuencia por el mismo valor <br> <br> Crea una sucesión geometrica: </div>
+  <label class="ingresar3" for="aGeometrica">Define un valor inicial: </label>
+  <input type="number3" id="aGeometrica" value="2">
+  <br>
+  <label class="ingresar3" for="rGeometrica">Define una razón común: </label>
+  <input type="number3" id="rGeometrica" value="3">
+  <br>
+  <label class="ingresar3" for="nGeometrica">Define el número de términos: </label>
+  <input type="number3" id="nGeometrica" value="5">
+  <br>
+  <button class="button3" onclick="calcularSucesionGeometrica()">Calcular</button>
+  <p class="resultado3"><span id="sucesionGeometricaResult"></span></p>
+</section>
+
+<section class="congruencia"> 
+  <h2 class="titulo4">Congruencia</h2>
+  <img src="img/secuencias-congruencia.png" alt="" class="img-congruencia">
+  <div class="definicion-congruencia">Dos números son congruentes si al ser divididos por un mismo número el resultado del modulo es el mismo. En una secuencia aritmética o geométrica los números que la conforman son congruentes. Al dividir cualquiera de los números que conforma la secuencia por la diferencia o razón común el resultado de la operación modulo será el mismo. <br> <br> Mira si dos números son congruentes: </div>
+  <label class="ingresar4" for="aCongruencia">Define el primer número: </label>
+  <input type="number4" id="aCongruencia" value="10">
+  <br>
+  <label class="ingresar4" for="bCongruencia">Define el segundo número: </label>
+  <input type="number4" id="bCongruencia" value="21">
+  <br>
+  <label class="ingresar4" for="nCongruencia">Define el módulo (Razón o diferencia): </label>
+  <input type="number4" id="nCongruencia" value="5">
+  <br>
+  <button class="button4" onclick="aplicarCongruencia()">Aplicar Congruencia</button>
+  <p class="resultado4">¿El primer número es congruente con el segundo número módulo el tercero? <span id="congruenciaResult"></span></p>
+      </section>
+
+      <footer>
+        <div class="footer">
+        <div class="names">Andres Felipe Torres Herrera</div>
+        <div class="names">Henry Mateo Chaverra Mena</div>
+        <div class="names"> David Andrés Castellanos Angulo</div>
+        <div class="names">Sara Daniela Baquero Cifuentes</div>
+        <a class="home" href="#header">Home</a>
+        </div>
+        </footer>
+        
+      </body> 
+
+      <script>
+        function calcularFibonacci() {
+            const numTerminos = parseInt(document.getElementById("numTerminos").value);
+            if (numTerminos <= 0) {
+                alert("Por favor, ingresa un número válido de términos (mayor o igual a 1).");
+                return;
+            }
+
+            let fibonacci = [0, 1];
+            for (let i = 2; i < numTerminos; i++) {
+                const nextTerm = fibonacci[i - 1] + fibonacci[i - 2];
+                fibonacci.push(nextTerm);
+            }
+
+            document.getElementById("fibonacciResult").textContent = fibonacci.join(', ');
+        }
+// Función para calcular una sucesión aritmética
+        function calcularSucesionAritmetica() {
+            const a = parseFloat(document.getElementById("aAritmetica").value);
+            const d = parseFloat(document.getElementById("dAritmetica").value);
+            const n = parseInt(document.getElementById("nAritmetica").value);
+            
+            let sucesion = [];
+            for (let i = 0; i < n; i++) {
+                let termino = a + (i * d);
+                sucesion.push(termino);
+            }
+            
+            document.getElementById("sucesionAritmeticaResult").textContent = sucesion.join(', ');
+        }
+// Función para calcular una sucesión geométrica
+function calcularSucesionGeometrica() {
+            const a = parseFloat(document.getElementById("aGeometrica").value);
+            const r = parseFloat(document.getElementById("rGeometrica").value);
+            const n = parseInt(document.getElementById("nGeometrica").value);
+            
+            let sucesion = [];
+            for (let i = 0; i < n; i++) {
+                let termino = a * Math.pow(r, i);
+                sucesion.push(termino);
+            }
+            
+            document.getElementById("sucesionGeometricaResult").textContent = sucesion.join(', ');
+        }
+
+        // Función para aplicar el concepto de congruencia
+        function aplicarCongruencia() {
+            const a = parseFloat(document.getElementById("aCongruencia").value);
+            const b = parseFloat(document.getElementById("bCongruencia").value);
+            const n = parseInt(document.getElementById("nCongruencia").value);
+
+            const resultadoCongruencia = a % n === b % n;
+            document.getElementById("congruenciaResult").textContent = resultadoCongruencia ? "Sí" : "No";
+        }
+
+      </script>
+
+      </html>

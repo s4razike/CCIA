@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="prob.css">
+    
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="ordenamiento.html" class="nav-link">ORDENAMIENTO</a></li>
+            <li class="nav-item"><a href="modulos.html" class="nav-link">MODULOS</a></li>
+            <li class="nav-item"><a href="secuencias.html" class="nav-link">SECUENCIAS</a></li>
+            <li class="nav-item"><a href="prob.html" class="nav-link">PROBABILIDAD</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x"></i>
+          </div>
+        </header>
+
+    <section class="menu">
+        <div class="style-menu"></div>
+        <div class="box"></div>
+        <div class="titulo">Probabilidad</div>
+        <div class="subtitulo">Relaciones de equivalencia y orden</div>
+        <div class="explicacion">La probabilidad es un calculo matematico con el cuál se puede establecer cuál es la medida de certidumbre de que un suceso determinado por el azar pase o no. Por otro lado el conteo mide de cuantas formas diferentes se pueden hacer 2 actividades o más y es la base para sacar una probabilidad. No obstante hay diferentes tecnicas de conteo, estas son las siguientes: 
+        </div>
+          <div class="explicacion-per">Permutación, esta se usa cuando se exige un orden especifico. Puede tener repetición, como los números en una contraseña, o no, como los puestos en una competencia.
+            <br> <br> 
+            Combinación, en esta no se exige un orden sino que lo importante es la presencia de un factor especifico. Puede tener repetición, como los ingredientes de un desayuno, o no, como al elegir las combinaciones en un grupo.
+          </div>       
+      </section>
+  <section>
+      <div id="cuadricula">
+
+        <div class="item" style="background-image: url(https://thumbs.dreamstime.com/b/barra-de-contrase%C3%B1a-abstracta-en-segundo-plano-concepto-protecci%C3%B3n-y-seguridad-d-representaci%C3%B3n-fondo-oscuro-234065332.jpg)"><p>Permutación sin repetición</p></div>   
+        <div class="item" style="background-image: url(https://i.pinimg.com/564x/af/35/9c/af359cf9def8701e3267aa84d2b83c08.jpg)"><p>Permutación con repetición</p></div>
+        <div class="item" style="background-image: url(https://www.recreoviral.com/wp-content/uploads/2015/06/25-recetas-disney-3.png)"><p>Combinación con repetición</p></div>
+        <div class="item" style="background-image: url(https://i.pinimg.com/564x/ca/99/fa/ca99fadf9326cc8e070feea534ab3d78.jpg)"><p>Combinación sin repetición</p></div>
+    </section>
+
+        <section class="conteo"> 
+        <h1 class="titulo1">Calculadora de Permutaciones y Combinaciones</h1>
+        <img src="https://i.pinimg.com/564x/a2/ad/88/a2ad8851350e6d1746804d48692f5617.jpg" alt="" class="img-helado">
+    <form id="formulario">
+        <label class="ingresar1" for="n">Valor de n:</label>
+        <input type="number" id="n" required>
+        <br>
+        <label class="ingresar1" for="k">Valor de k:</label>
+        <input type="number" id="k" required>
+        <br>
+        <label class="ingresar1" for="tipo">Elige el tipo de conteo:</label>
+
+        <select class="forms" id="tipo" required>
+            <option value="permutacionesSinRepetición">Permutaciones sin repetición</option>
+            <option value="permutacionesConRepetición">Permutaciones con repetición</option>
+            <option value="combinacionesSinRepetición">Combinaciones sin repetición</option>
+            <option value="combinacionesConRepetición">Combinaciones con repetición</option>
+        </select>
+        <div class="nk-exp">Recuerda que "n" es la cantidad total de posibilidades y "k" el numero de elecciones, por ejemplo "n" sería el valor total de sabores de helado que se pueden elegir y "k" el numero de bolitas de helado que pedirás.</div>
+        <br>
+        <input class="button" type="submit" value="Calcular">
+    </form>
+    <div class="resultado" id="resultados"></div>
+    <script src="script.js"></script> 
+    </section>
+
+    <section class="programacion">
+        <div class="MCD-titulo"></div>
+        <div class="explicacion-form">Para hacer esto solo son necesarias las formulas, las cuales aplicamos se ven en código de la siguiente manera:</div>
+        <img src="img/probabilidad-permutacion .png" alt="" class="img-perm">   
+        <img src="img/probabilidad-combinacion.png" alt="" class="img-comb"> 
+      
+    </section>
+
+    <footer>
+        <div class="footer">
+        <div class="names">Andres Felipe Torres Herrera</div>
+        <div class="names">Henry Mateo Chaverra Mena</div>
+        <div class="names"> David Andrés Castellanos Angulo</div>
+        <div class="names">Sara Daniela Baquero Cifuentes</div>
+        <a class="home" href="#header">Home</a>
+        </div>
+        </footer>
+        
+</body>

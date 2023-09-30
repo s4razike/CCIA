@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="modulos.css">
+    <link rel="jscode" href="modulo.js">
+    
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="ordenamiento.html" class="nav-link">ORDENAMIENTO</a></li>
+            <li class="nav-item"><a href="modulos.html" class="nav-link">MODULOS</a></li>
+            <li class="nav-item"><a href="secuencias.html" class="nav-link">SECUENCIAS</a></li>
+            <li class="nav-item"><a href="prob.html" class="nav-link">PROBABILIDAD</a></li>
+          </ul>
+        </nav>
+        </header>
+
+    <section class="menu2">
+        <div class="style-menu"></div>
+        <div class="box"></div>
+        <div class="titulo2">Modulos</div>
+        <div class="subtitulo">Introducción a la operacion modulo</div>
+        <div class="explicacion">Al realizar una división muchas veces el resultado no es un número entero. En estos casos la ecuación modulo devuelve el residuo de la división. 
+          Esta ecuación es expresada con su abreviación mod y el resultado devuelve entonces un número entero que va desde 0, número el cuál indica que la división es cerrada. Es esta entonces una de las herramientas más básicas y más utilizadas en la programación dada la multiplicidad de problemas que puede ayudar a solucionar de forma creativa. 
+        </div>
+          <div class="operacion">A/B = Q residuo M </div>
+          <div class="explicacion-op">A es el dividendo <br> B es el divisor <br> Q es el cociente <br> M es el modulo</div>
+
+          <div class="clock"></div>
+        <div class="explicacion-rej">Al usar un reloj en hora militar usamos los modulos sin darnos cuenta al usar el doce como dividendo. 
+          De esta forma las 14 horas por ejemplo son las 2 de la tarde, y este es el resultado de 14 mod 12. </div>       
+    </section>
+
+    <section class="programacion">
+<div class="subtitulo2">Apliquemoslo a la programacion!</div>
+<h1 class="primos">Conteo de números primos</h1>
+<img src="img/Modulos-primos.png" alt="" class="img-primos">
+<div class="definicion-primos">Un numero primo es aquel q es solo divisible entre 0 y 1. En este sentido los numeros primos son unicamente impares, a excepcion del 2. <br> <br> Ingresa un número para verificar si es primo</div>
+
+<input class="number" id="numeroInput"> <br>
+<button class="button" onclick="verificarPrimo()">Verificar</button>
+<div id="mensajeNumero0" class="mensaje-error0"></div>
+<p class="resultado" id="resultadoPrimo"></p>
+
+<img class="pizza" src="https://images.vexels.com/media/users/3/230796/isolated/preview/28fd4675876fbf3f580ab5b0a9785449-dibujos-animados-de-rebanada-de-pizza-feliz.png" alt="">
+    </section>  
+
+    <section class="accordion">
+      <div class="tab">
+        <input type="checkbox" name="accordion-1" id="cb1">
+        <label for="cb1" class="tab__label">Observa</label>
+        <div class="tab__content">
+          <p>El simbolo % es el que se usa para la operación modulo en js. Si el modulo del numero dividido entre los valores del 2 a al raiz del numero es 0 es primo</p>
+        </div>
+      </section>
+
+
+<section class="MCD"> 
+      <div class="MCD-titulo">Maximo Comun Divisor</div>
+        <div class="definicion-MCD">Es el mayor número que divide exactamente a dos o más números a la vez.  Esto resulta util en la simplificacion de fracciones <br> y resolucion de problemas<br> <br> Comprueba cual es el MCD de dos numeros</div>
+        <img src="img/modulos-MCD.png" alt="" class="img-MCD">
+        <label class="MCD">Ingrese el primer número:</label>
+        <input type="number1" id="numero1">
+        <div id="mensajeNumero1" class="mensaje-error1"></div>
+      </div>
+      <div> 
+        <label class="MCD">Ingrese el segundo número:</label>
+        <input type="number1" id="numero2">
+        <div id="mensajeNumero2" class="mensaje-error1"></div>
+        <img src="img/euclides.png" alt="" class="euclides">
+       
+      </div>
+      <button onclick="calcularMCD()" class="button1">Calcular MCD</button>
+      <div id="output" class="resultado1"></div>
+      <div class="euclides-exp">Para hacer este algoritmo usamos el teorema de Euclides, una division sucesiva en la que usamos el modulo hasta que este sea 0</div>
+</section>
+
+<section class="mcm"> 
+  <div class="mcm-titulo">Minimo Comun Multiplo</div>
+  <div class="definicion-mcm">Es el menor multiplo común entre dos o más números a la vez.  Este de igual forma resulta util en la simplificacion de fracciones <br> y resolucion de ecuaciones de denominador diferente<br> <br> Comprueba cual es el mcm de dos numeros</div>
+  <img src="img/modulos-mcm.png" alt="" class="img-mcm">
+  <div>
+    <label class="mcm">Ingrese el primer número:</label>
+    <input class="number1" id="num1">
+    <div id="mensajeNumero3" class="mensaje-error2"></div>
+    <img class="tortugas" src="img/tortugas.png" alt="">
+  </div>
+  <div>
+    <label class="mcm">Ingrese el segundo número:</label>
+    <div id="mensajeNumero4" class="mensaje-error2"></div>
+    <input class="number2" id="num2">
+  </div>
+  <button onclick="calcularMCM()" class="button2">Calcular MCM</button>
+  <div id="resultado2" class="resultado2"></div>
+</div>
+</section>
+
+<section class="Euler-Fermat"> 
+  <div class="fermat-titulo">Teorema de Euler-Fermat</div>
+  <div class="definicion-fermat"> El teorema de Euler-Fermat es una generalización del pequeño teorema de Fermat, y como tal afirma una proposición sobre la divisibilidad de los números enteros.Esta dice de forma textual lo siguiente:</div>
+  <div class="operacion-fermat">Si a es un entero positivo y p un primo que no es factor de a, entonces p ha de ser un factor de aᴾ⁻¹ – 1</div>
+  <img class="img-fermat" src="img/modulos-fermat.png" alt="">
+  <p class="Ingresar">Ingresa un número primo p:</p>
+  <input class="number3" id="pInput">
+  <p class="Ingresar">Ingresa un número a entero no divisible entre p:</p>
+  <input class="number4" id="aInput">
+  <button class="button4"  onclick="calcularEulerFermat()">Calcular</button>
+  <p class="resultado4" id="resultadoEulerFermat"></p>
+  <div class="fermat-exp">Revisamos primero que los numeros puestos cumplan con las condiciones del teorema y aplicamos entonces el algoritmo</div>
+</section>
+
+<footer>
+  <div class="footer">
+  <div class="names">Andres Felipe Torres Herrera</div>
+  <div class="names">Henry Mateo Chaverra Mena</div>
+  <div class="names"> David Andrés Castellanos Angulo</div>
+  <div class="names">Sara Daniela Baquero Cifuentes</div>
+  <a class="home" href="#header">Home</a>
+  </div>
+  </footer>
+  
+  </body> 
+
+<script>
+
+// Conteo de números primos
+function esPrimo(numero) {
+    if (numero <= 1) {
+      return false;
+    }
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+      if (numero % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function verificarPrimo() {
+    const numero = parseInt(document.getElementById("numeroInput").value);
+    const resultadoPrimo = document.getElementById("resultadoPrimo");
+
+    if (esPrimo(numero)) {
+      resultadoPrimo.textContent = numero + " es un número primo.";
+    } else {
+      resultadoPrimo.textContent = numero + " no es un número primo.";
+    }
+  }
+
+  //----------------------------------MCD
+
+  function calcularMCD() {
+      const numero1 = parseInt(document.getElementById('numero1').value);
+      const numero2 = parseInt(document.getElementById('numero2').value);
+      const mensajeNumero1 = document.getElementById('mensajeNumero1');
+      const mensajeNumero2 = document.getElementById('mensajeNumero2');
+      
+      mensajeNumero1.innerHTML = '';
+      mensajeNumero2.innerHTML = '';
+
+      if (isNaN(numero1)) {
+        mensajeNumero1.innerHTML = 'Por favor, ingrese un número válido.';
+        return;
+      }
+
+      if (isNaN(numero2)) {
+        mensajeNumero2.innerHTML = 'Por favor, ingrese un número válido.';
+        return;
+      }
+
+      const mcd = calcularMCDAlgoritmo(numero1, numero2);
+      document.getElementById('output').innerHTML = `El MCD de ${numero1} y ${numero2} es: ${mcd}`;
+    }
+
+    function calcularMCDAlgoritmo(a, b) {
+      while (b !== 0) {
+        const temp = b;
+        b = a % b;
+        a = temp;
+      }
+      return a;
+      }
+
+
+  /*----------------------------------mcm---------------------------------*/
+  function calcularMCM() {
+      const num1 = parseInt(document.getElementById('num1').value);
+      const num2 = parseInt(document.getElementById('num2').value);
+      const resultado2 = document.getElementById('resultado2');
+      const mensajeNumero3 = document.getElementById('mensajeNumero3');
+      const mensajeNumero4 = document.getElementById('mensajeNumero4');
+      
+      mensajeNumero3.innerHTML = '';
+      mensajeNumero4.innerHTML = '';
+
+
+      if (isNaN(num1)) {
+        mensajeNumero3.innerHTML = 'Por favor, ingrese un número válido.';
+        return;
+      }
+
+      if (isNaN(num2)) {
+        mensajeNumero4.innerHTML = 'Por favor, ingrese un número válido.';
+        return;
+      }
+
+      const mcm = calcularMCMAlgoritmo(num1, num2);
+      resultado2.innerHTML = `El MCM de ${num1} y ${num2} es: ${mcm}`;
+    }
+
+    function calcularMCMAlgoritmo(a, b) { 
+      const max = Math.max(a, b);
+      const min = Math.min(a, b);
+
+      for (let i = max; ; i += max) {
+        if (i % min === 0) {
+          return i;
+        }
+      }
+    }
+
+    // Teorema de Euler-Fermat
+    function calcularEulerFermat() {
+          const p = parseInt(document.getElementById("pInput").value);
+          const a = parseInt(document.getElementById("aInput").value);
+          const resultadoEulerFermat = document.getElementById("resultadoEulerFermat");
+        
+
+          function esPrimo(p) {
+            if (p <= 1) {
+              return false;
+            }
+            for (let i = 2; i <= Math.sqrt(p); i++) {
+              if (p % i === 0) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          if (!esPrimo(p) || a % p === 0) {
+            resultadoEulerFermat.textContent = "Los números ingresados no cumplen las condiciones.";
+          
+          } else {
+            const resultado = Math.pow(a, p - 1) % p;
+            resultadoEulerFermat.textContent = a + "^(p-1) ≡ " + resultado + " (mod " + p + ")";
+            }
+            }
+          
+          
+
+  </script>
+
+</html>
