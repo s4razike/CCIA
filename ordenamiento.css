@@ -104,7 +104,7 @@ header {
 .menu {
     padding: 1rem 2rem;
     background:var(--background-color);
-    height: 550px;
+    height: 650px;
   }
   
   .style-menu {
@@ -156,7 +156,7 @@ header {
   .ordenamiento {
     padding: 1rem 2rem;
     background:var(--primary-color);
-    height: 500px;
+    height: 600px;
   }
   
   .titulo1 {
@@ -271,7 +271,7 @@ header {
 .number2 {
   margin-top: 30px;
 }
-.button {
+.button2 {
   margin-top: 15px;
   margin-left: 15rem;
   font-family: 'Mooli', sans-serif;

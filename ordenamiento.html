@@ -55,7 +55,7 @@
             <label class="ingresar2" for="inputArray2">Ingrese los valores del arreglo separados por comas:</label>
             <input class="number2" type="text" id="inputArray2" placeholder="Por ejemplo: 5, 3, 1, 6, 4">
             <br> <br>
-            <button class="button" onclick="sortArray2()">Ordenar</button>
+            <button class="button2" onclick="sortArray2()">Ordenar</button>
             
             <p class="resultado2">Arreglo original: <span id="originalArray2"></span></p>
             <p class="resultado2">Arreglo ordenado: <span id="sortedArray2"></span></p>
@@ -100,14 +100,14 @@
             }
         }
 
-        function sortArray2() {
-            const inputArray2 = document.getElementById("inputArray2").value;
-            const originalArray2 = inputArray2.split(',').map(item => parseInt(item.trim()));
-            const sortedArray2 = [...originalArray2];
-            selectionSort2(sortedArray2);
+        function sortArray() {
+            const inputArray = document.getElementById("inputArray").value;
+            const originalArray = inputArray.split(',').map(item => parseInt(item.trim()));
+            const sortedArray = [...originalArray];
+            selectionSort(sortedArray);
 
-            document.getElementById("originalArray2").textContent = originalArray2.join(", ");
-            document.getElementById("sortedArray2").textContent = sortedArray2.join(", ");
+            document.getElementById("originalArray").textContent = originalArray.join(", ");
+            document.getElementById("sortedArray").textContent = sortedArray.join(", ");
             }
 
             function selectionSort2(arr) {
